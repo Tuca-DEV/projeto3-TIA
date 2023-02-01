@@ -1,15 +1,12 @@
-function [distancia] = distanciaTotal(OrdemCidadesVisitadas, tabela_distancias)
+function [distancia] = distanciaTotal(pop, tabela_distancias)
 
-  distancia = 0;
+  [l, c] = size(pop);
 
-  for i = 1:(length(OrdemCidadesVisitadas)-1);
-
-    cidade1 = OrdemCidadesVisitadas(i);
-    cidade2 = OrdemCidadesVisitadas(i+1);
-    distancia += tabela_distancias(cidade1, cidade2);
-
+  for i = 1:l
+    distancia(i) = 0;
+    for j = 1:(c-1)
+      distancia(i) += tabela_distancias(pop(i, j), pop(i, j+1));
+    endfor
   endfor
-
-  disp(distancia);
 
 endfunction
