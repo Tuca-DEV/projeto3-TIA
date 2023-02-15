@@ -1,4 +1,4 @@
-function choice = roleta(weights)
+function parents = roleta(weights)
   accumulation = cumsum(weights);
   p = rand() * accumulation(end);
   chosen_index = -1;

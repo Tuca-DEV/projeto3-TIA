@@ -11,7 +11,7 @@ do
    melhor_da_geracao(1, i) = min(distanciaCidades)
 
    %Seleção -> Cruzamento -> Mutação -> Inserção
-   pais = roleta(distanciaCidades)
+   pais = elitismo(distanciaCidades)
    filhos = crossOver(pais, populacao);
    filhos = mutacao(filhos)
    populacao(16:17, :) = filhos;
@@ -23,9 +23,6 @@ do
    endfor
 until(melhor_da_geracao(i) <= 10)
 
-[valor, indice] = min(distanciaCidades);
-disp('O melhor caminho é: ')
-populacao(indice, :)
 
 plot((1:length(melhor_da_geracao)), melhor_da_geracao)
 
