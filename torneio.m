@@ -1,7 +1,9 @@
 function [pais] = torneio(distancia_total)
+  
   sorteio = randperm(15);
   pais = zeros(1,2);
   j = 1;
+  
   for i = 1:2:4
     comp1 = distancia_total(sorteio(i));
     comp2 = distancia_total(sorteio(i+1));

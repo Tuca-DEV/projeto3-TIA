@@ -1,4 +1,5 @@
 function [doismaisAptos] = elitismo(distancia_total)
+  
   doismaisAptos = zeros(1,2);
 
   for i= 1:2

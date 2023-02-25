@@ -1,4 +1,5 @@
 function [matriz] = init_caminho()
+  
    m = [0, 1, 7, 2, 6, 3, 1;
         1, 0, 1, 9 , 3, 10, 8;
         7, 1, 0, 1, 4, 3, 7;
@@ -8,6 +9,8 @@ function [matriz] = init_caminho()
         1, 8, 7, 5, 2, 1, 0];
 
    matriz = m;
+   
+endfunction
 
 
 

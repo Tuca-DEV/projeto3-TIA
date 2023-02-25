@@ -1,4 +1,5 @@
 function [filhos] = crossOver(pais, popu)
+  
   %pais é um vetor de 1 dimensão que contém o endereço(n° da linha) dos pais na população
   areacorte = 2:4;
   %Cruzando a primeira metade
@@ -33,7 +34,7 @@ function [filhos] = crossOver(pais, popu)
           cidades(1) = [];
         endif
       endfor
-      
     endif
   endfor
+  
 endfunction
